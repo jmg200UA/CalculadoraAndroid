@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/rojaso"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="40"
+        android:layout_margin="25dp"
+        android:background="@color/verdoso">
+        <TextView
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NUM A"
+            android:textColor="@color/negro"
+            android:id="@+id/textView1" />
+        <EditText
+            android:layout_marginLeft="110dp"
+            android:digits="0,1"
+            android:maxLength="8"
+            android:hint="Inserte número"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numA"
+            android:textColor="@color/nigga"
+            android:layout_below="@+id/textView1" />
+        <TextView
+            android:layout_marginLeft="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NUM B"
+            android:textColor="@color/negro"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/numA" />
+        <EditText
+            android:layout_marginLeft="110dp"
+            android:digits="0,1"
+            android:maxLength="8"
+            android:hint="Inserte número"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numB"
+            android:textColor="@color/nigga"
+            android:layout_below="@+id/textView2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="32"
+        android:layout_margin="15dp"
+        android:background="@color/verdoso">
+        <Button android:id="@+id/botonSuma"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUMA"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="40dp"/>
+
+        <Button android:id="@+id/botonResta"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESTA"
+            android:layout_toRightOf="@+id/botonSuma"
+            android:layout_marginRight="62dp"
+            android:layout_marginTop="40dp"/>
+
+        <Button android:id="@+id/botonMult"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MULTIPLICACIÓN"
+            android:layout_below="@+id/botonResta"
+            android:layout_marginLeft="160dp"
+            />
+
+        <Button android:id="@+id/botonDiv"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIVISIÓN"
+            android:layout_below="@+id/botonSuma"
+            android:layout_marginLeft="72dp"
+            />
+        <Button android:id="@+id/botonOr"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:layout_below="@+id/botonDiv"
+            android:layout_marginTop="85dp"
+            android:layout_marginLeft="60dp"
+            />
+        <Button android:id="@+id/botonAnd"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AND"
+            android:layout_below="@+id/botonDiv"
+            android:layout_toRightOf="@id/botonOr"
+            android:layout_marginTop="85dp"
+
+            />
+        <Button android:id="@+id/botonXor"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XOR"
+            android:layout_below="@+id/botonDiv"
+            android:layout_marginTop="85dp"
+            android:layout_toRightOf="@id/botonAnd"
+            />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/opciones_operaciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_bN"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="16dp"
+                android:checked="true"
+                android:text="Bin Natural" />
+            <RadioButton android:id="@+id/radio_syM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="SyM" />
+            <RadioButton android:id="@+id/radio_logica"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Logica" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="45"
+        android:layout_margin="5dp"
+        android:background="@color/verdoso">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resultado "
+            android:id="@+id/Resultado"
+            android:singleLine="false"
+            android:textColor="@color/negro"
+            android:textSize="25sp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sumaNumeros"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_below="@+id/Resultado"
+            android:layout_marginLeft="160dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
